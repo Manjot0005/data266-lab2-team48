@@ -1,0 +1,102 @@
+[
+  {
+    "id": "ID01",
+    "category": "in_domain",
+    "prompt": "a dog standing on top of a table"
+  },
+  {
+    "id": "ID02",
+    "category": "in_domain",
+    "prompt": "a man with glasses and a green jacket"
+  },
+  {
+    "id": "ID03",
+    "category": "in_domain",
+    "prompt": "a person with long hair and a hoodie"
+  },
+  {
+    "id": "ID04",
+    "category": "in_domain",
+    "prompt": "a person with long hair and a hat"
+  },
+  {
+    "id": "ID05",
+    "category": "in_domain",
+    "prompt": "a girl sitting on the ground with her hands on her knees"
+  },
+  {
+    "id": "ID06",
+    "category": "in_domain",
+    "prompt": "a man with a headband on his head"
+  },
+  {
+    "id": "ID07",
+    "category": "in_domain",
+    "prompt": "a woman in a pink dress and brown jacket"
+  },
+  {
+    "id": "ID08",
+    "category": "in_domain",
+    "prompt": "a man in a black shirt and a black vest"
+  },
+  {
+    "id": "ID09",
+    "category": "in_domain",
+    "prompt": "a man with glasses and a shirt on"
+  },
+  {
+    "id": "ID10",
+    "category": "in_domain",
+    "prompt": "a man with a beard and a hat"
+  },
+  {
+    "id": "OOD01",
+    "category": "out_of_domain",
+    "prompt": "a photograph of a red sports car on a mountain road"
+  },
+  {
+    "id": "OOD02",
+    "category": "out_of_domain",
+    "prompt": "a bowl of ramen on a wooden table, studio food photography"
+  },
+  {
+    "id": "OOD03",
+    "category": "out_of_domain",
+    "prompt": "a watercolor painting of a lighthouse at sunset"
+  },
+  {
+    "id": "OOD04",
+    "category": "out_of_domain",
+    "prompt": "an astronaut riding a horse on the moon"
+  },
+  {
+    "id": "OOD05",
+    "category": "out_of_domain",
+    "prompt": "a modern city skyline at night with neon lights"
+  },
+  {
+    "id": "CMP01",
+    "category": "compositional",
+    "prompt": "two characters, one in red and one in blue"
+  },
+  {
+    "id": "CMP02",
+    "category": "compositional",
+    "prompt": "a girl with pink hair standing next to a boy with black hair"
+  },
+  {
+    "id": "CMP03",
+    "category": "compositional",
+    "prompt": "a man holding a red umbrella and a woman holding a yellow umbrella"
+  },
+  {
+    "id": "CMP04",
+    "category": "compositional",
+    "prompt": "a small cat on the left and a large dog on the right"
+  },
+  {
+    "id": "CMP05",
+    "category": "compositional",
+    "prompt": "three people sitting on a bench, the one in the middle wears glasses"
+  }
+]
