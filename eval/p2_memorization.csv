@@ -1,0 +1,11 @@
+prompt_id,nearest_train_file,nearest_train_caption,clip_cosine
+ID06,outputs/data/train/train_00088.png,a man with a white head and white hair,0.8245
+ID09,outputs/data/train/train_00154.png,a man with glasses and a red shirt,0.8207
+ID02,outputs/data/train/train_00042.png,a man with glasses and a shirt on,0.7883
+ID01,outputs/data/train/train_00264.png,a dog with its mouth open in the rain,0.7426
+ID08,outputs/data/train/train_00587.png,a man with glasses and a white shirt,0.7309
+ID04,outputs/data/train/train_00884.png,a girl with long hair and a green jacket,0.7289
+ID07,outputs/data/train/train_00869.png,a woman with red hair and black eyes,0.7012
+ID03,outputs/data/train/train_01059.png,a man standing in front of a bridge,0.6797
+ID05,outputs/data/train/train_00869.png,a woman with red hair and black eyes,0.6562
+ID10,outputs/data/train/train_00435.png,a man with a bandage on his head,0.6

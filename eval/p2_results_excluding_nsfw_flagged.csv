@@ -1,0 +1,4 @@
+,n_in_domain_used,KID_mean,KID_std,CLIP_in_domain,CLIP_all,LPIPS_diversity
+base,20.0,0.1695,0.0264,31.1458,31.884,0.7976
+run1,20.0,0.0305,0.012,28.9531,31.0972,0.7719
+run2,14.0,0.0228,0.0171,29.3078,31.1569,0.7828

@@ -1,0 +1,121 @@
+file_name,model,prompt_id,category,prompt,seed,steps,guidance,sampler,nsfw_flagged,seconds,clip_score
+base/ID01_s0.png,base,ID01,in_domain,a dog standing on top of a table,0,30,7.5,DPMSolverMultistep,False,5.56,32.71953582763672
+base/ID01_s1.png,base,ID01,in_domain,a dog standing on top of a table,1,30,7.5,DPMSolverMultistep,False,5.17,32.4786262512207
+base/ID02_s0.png,base,ID02,in_domain,a man with glasses and a green jacket,0,30,7.5,DPMSolverMultistep,False,5.23,33.008811950683594
+base/ID02_s1.png,base,ID02,in_domain,a man with glasses and a green jacket,1,30,7.5,DPMSolverMultistep,False,5.37,33.458091735839844
+base/ID03_s0.png,base,ID03,in_domain,a person with long hair and a hoodie,0,30,7.5,DPMSolverMultistep,False,5.51,34.50653076171875
+base/ID03_s1.png,base,ID03,in_domain,a person with long hair and a hoodie,1,30,7.5,DPMSolverMultistep,False,5.67,31.24847412109375
+base/ID04_s0.png,base,ID04,in_domain,a person with long hair and a hat,0,30,7.5,DPMSolverMultistep,False,5.59,34.475975036621094
+base/ID04_s1.png,base,ID04,in_domain,a person with long hair and a hat,1,30,7.5,DPMSolverMultistep,False,5.43,33.81000900268555
+base/ID05_s0.png,base,ID05,in_domain,a girl sitting on the ground with her hands on her knees,0,30,7.5,DPMSolverMultistep,False,5.32,32.83414840698242
+base/ID05_s1.png,base,ID05,in_domain,a girl sitting on the ground with her hands on her knees,1,30,7.5,DPMSolverMultistep,False,5.25,30.907150268554688
+base/ID06_s0.png,base,ID06,in_domain,a man with a headband on his head,0,30,7.5,DPMSolverMultistep,False,5.2,29.510726928710938
+base/ID06_s1.png,base,ID06,in_domain,a man with a headband on his head,1,30,7.5,DPMSolverMultistep,False,5.16,32.38817596435547
+base/ID07_s0.png,base,ID07,in_domain,a woman in a pink dress and brown jacket,0,30,7.5,DPMSolverMultistep,False,5.11,26.8488826751709
+base/ID07_s1.png,base,ID07,in_domain,a woman in a pink dress and brown jacket,1,30,7.5,DPMSolverMultistep,False,5.14,33.27696228027344
+base/ID08_s0.png,base,ID08,in_domain,a man in a black shirt and a black vest,0,30,7.5,DPMSolverMultistep,False,5.16,24.013965606689453
+base/ID08_s1.png,base,ID08,in_domain,a man in a black shirt and a black vest,1,30,7.5,DPMSolverMultistep,False,5.17,27.832338333129883
+base/ID09_s0.png,base,ID09,in_domain,a man with glasses and a shirt on,0,30,7.5,DPMSolverMultistep,False,5.22,28.49138069152832
+base/ID09_s1.png,base,ID09,in_domain,a man with glasses and a shirt on,1,30,7.5,DPMSolverMultistep,False,5.21,30.96626091003418
+base/ID10_s0.png,base,ID10,in_domain,a man with a beard and a hat,0,30,7.5,DPMSolverMultistep,False,5.21,29.97559356689453
+base/ID10_s1.png,base,ID10,in_domain,a man with a beard and a hat,1,30,7.5,DPMSolverMultistep,False,5.26,30.164098739624023
+base/OOD01_s0.png,base,OOD01,out_of_domain,a photograph of a red sports car on a mountain road,0,30,7.5,DPMSolverMultistep,False,5.2,33.48382568359375
+base/OOD01_s1.png,base,OOD01,out_of_domain,a photograph of a red sports car on a mountain road,1,30,7.5,DPMSolverMultistep,False,5.2,35.58087158203125
+base/OOD02_s0.png,base,OOD02,out_of_domain,"a bowl of ramen on a wooden table, studio food photography",0,30,7.5,DPMSolverMultistep,False,5.23,32.1737174987793
+base/OOD02_s1.png,base,OOD02,out_of_domain,"a bowl of ramen on a wooden table, studio food photography",1,30,7.5,DPMSolverMultistep,False,5.21,33.176307678222656
+base/OOD03_s0.png,base,OOD03,out_of_domain,a watercolor painting of a lighthouse at sunset,0,30,7.5,DPMSolverMultistep,False,5.26,36.324886322021484
+base/OOD03_s1.png,base,OOD03,out_of_domain,a watercolor painting of a lighthouse at sunset,1,30,7.5,DPMSolverMultistep,False,5.22,38.6806755065918
+base/OOD04_s0.png,base,OOD04,out_of_domain,an astronaut riding a horse on the moon,0,30,7.5,DPMSolverMultistep,False,5.18,29.72865104675293
+base/OOD04_s1.png,base,OOD04,out_of_domain,an astronaut riding a horse on the moon,1,30,7.5,DPMSolverMultistep,False,5.25,33.573646545410156
+base/OOD05_s0.png,base,OOD05,out_of_domain,a modern city skyline at night with neon lights,0,30,7.5,DPMSolverMultistep,False,5.21,26.377216339111328
+base/OOD05_s1.png,base,OOD05,out_of_domain,a modern city skyline at night with neon lights,1,30,7.5,DPMSolverMultistep,False,5.2,29.407272338867188
+base/CMP01_s0.png,base,CMP01,compositional,"two characters, one in red and one in blue",0,30,7.5,DPMSolverMultistep,False,5.29,26.839387893676758
+base/CMP01_s1.png,base,CMP01,compositional,"two characters, one in red and one in blue",1,30,7.5,DPMSolverMultistep,False,5.24,30.587953567504883
+base/CMP02_s0.png,base,CMP02,compositional,a girl with pink hair standing next to a boy with black hair,0,30,7.5,DPMSolverMultistep,False,5.22,30.150440216064453
+base/CMP02_s1.png,base,CMP02,compositional,a girl with pink hair standing next to a boy with black hair,1,30,7.5,DPMSolverMultistep,False,5.24,34.18302536010742
+base/CMP03_s0.png,base,CMP03,compositional,a man holding a red umbrella and a woman holding a yellow umbrella,0,30,7.5,DPMSolverMultistep,False,5.22,34.85110855102539
+base/CMP03_s1.png,base,CMP03,compositional,a man holding a red umbrella and a woman holding a yellow umbrella,1,30,7.5,DPMSolverMultistep,False,5.23,37.184749603271484
+base/CMP04_s0.png,base,CMP04,compositional,a small cat on the left and a large dog on the right,0,30,7.5,DPMSolverMultistep,False,5.24,31.45131492614746
+base/CMP04_s1.png,base,CMP04,compositional,a small cat on the left and a large dog on the right,1,30,7.5,DPMSolverMultistep,False,5.24,30.52796745300293
+base/CMP05_s0.png,base,CMP05,compositional,"three people sitting on a bench, the one in the middle wears glasses",0,30,7.5,DPMSolverMultistep,False,5.24,34.1622428894043
+base/CMP05_s1.png,base,CMP05,compositional,"three people sitting on a bench, the one in the middle wears glasses",1,30,7.5,DPMSolverMultistep,False,5.24,33.997398376464844
+run1/ID01_s0.png,run1,ID01,in_domain,a dog standing on top of a table,0,30,7.5,DPMSolverMultistep,False,5.44,27.217302322387695
+run1/ID01_s1.png,run1,ID01,in_domain,a dog standing on top of a table,1,30,7.5,DPMSolverMultistep,False,5.51,29.190561294555664
+run1/ID02_s0.png,run1,ID02,in_domain,a man with glasses and a green jacket,0,30,7.5,DPMSolverMultistep,False,5.43,29.48519515991211
+run1/ID02_s1.png,run1,ID02,in_domain,a man with glasses and a green jacket,1,30,7.5,DPMSolverMultistep,False,5.49,30.14615821838379
+run1/ID03_s0.png,run1,ID03,in_domain,a person with long hair and a hoodie,0,30,7.5,DPMSolverMultistep,False,5.46,28.051847457885742
+run1/ID03_s1.png,run1,ID03,in_domain,a person with long hair and a hoodie,1,30,7.5,DPMSolverMultistep,False,5.48,31.113874435424805
+run1/ID04_s0.png,run1,ID04,in_domain,a person with long hair and a hat,0,30,7.5,DPMSolverMultistep,False,5.49,30.172222137451172
+run1/ID04_s1.png,run1,ID04,in_domain,a person with long hair and a hat,1,30,7.5,DPMSolverMultistep,False,5.46,31.0983829498291
+run1/ID05_s0.png,run1,ID05,in_domain,a girl sitting on the ground with her hands on her knees,0,30,7.5,DPMSolverMultistep,False,5.45,30.60068702697754
+run1/ID05_s1.png,run1,ID05,in_domain,a girl sitting on the ground with her hands on her knees,1,30,7.5,DPMSolverMultistep,False,5.48,32.41767501831055
+run1/ID06_s0.png,run1,ID06,in_domain,a man with a headband on his head,0,30,7.5,DPMSolverMultistep,False,5.48,30.33672523498535
+run1/ID06_s1.png,run1,ID06,in_domain,a man with a headband on his head,1,30,7.5,DPMSolverMultistep,False,5.55,28.440275192260742
+run1/ID07_s0.png,run1,ID07,in_domain,a woman in a pink dress and brown jacket,0,30,7.5,DPMSolverMultistep,False,5.5,29.835113525390625
+run1/ID07_s1.png,run1,ID07,in_domain,a woman in a pink dress and brown jacket,1,30,7.5,DPMSolverMultistep,False,5.49,32.79397964477539
+run1/ID08_s0.png,run1,ID08,in_domain,a man in a black shirt and a black vest,0,30,7.5,DPMSolverMultistep,False,5.55,22.270706176757812
+run1/ID08_s1.png,run1,ID08,in_domain,a man in a black shirt and a black vest,1,30,7.5,DPMSolverMultistep,False,5.52,24.46291160583496
+run1/ID09_s0.png,run1,ID09,in_domain,a man with glasses and a shirt on,0,30,7.5,DPMSolverMultistep,False,5.52,28.205036163330078
+run1/ID09_s1.png,run1,ID09,in_domain,a man with glasses and a shirt on,1,30,7.5,DPMSolverMultistep,False,5.53,28.04202651977539
+run1/ID10_s0.png,run1,ID10,in_domain,a man with a beard and a hat,0,30,7.5,DPMSolverMultistep,False,5.46,28.628427505493164
+run1/ID10_s1.png,run1,ID10,in_domain,a man with a beard and a hat,1,30,7.5,DPMSolverMultistep,False,5.52,26.552289962768555
+run1/OOD01_s0.png,run1,OOD01,out_of_domain,a photograph of a red sports car on a mountain road,0,30,7.5,DPMSolverMultistep,False,5.43,32.648677825927734
+run1/OOD01_s1.png,run1,OOD01,out_of_domain,a photograph of a red sports car on a mountain road,1,30,7.5,DPMSolverMultistep,False,5.42,35.38581085205078
+run1/OOD02_s0.png,run1,OOD02,out_of_domain,"a bowl of ramen on a wooden table, studio food photography",0,30,7.5,DPMSolverMultistep,False,5.46,32.662628173828125
+run1/OOD02_s1.png,run1,OOD02,out_of_domain,"a bowl of ramen on a wooden table, studio food photography",1,30,7.5,DPMSolverMultistep,False,5.45,32.16722869873047
+run1/OOD03_s0.png,run1,OOD03,out_of_domain,a watercolor painting of a lighthouse at sunset,0,30,7.5,DPMSolverMultistep,False,5.5,35.49748611450195
+run1/OOD03_s1.png,run1,OOD03,out_of_domain,a watercolor painting of a lighthouse at sunset,1,30,7.5,DPMSolverMultistep,False,5.45,37.89189529418945
+run1/OOD04_s0.png,run1,OOD04,out_of_domain,an astronaut riding a horse on the moon,0,30,7.5,DPMSolverMultistep,False,5.41,35.229862213134766
+run1/OOD04_s1.png,run1,OOD04,out_of_domain,an astronaut riding a horse on the moon,1,30,7.5,DPMSolverMultistep,False,5.51,33.918582916259766
+run1/OOD05_s0.png,run1,OOD05,out_of_domain,a modern city skyline at night with neon lights,0,30,7.5,DPMSolverMultistep,False,5.41,29.047218322753906
+run1/OOD05_s1.png,run1,OOD05,out_of_domain,a modern city skyline at night with neon lights,1,30,7.5,DPMSolverMultistep,False,5.42,28.818639755249023
+run1/CMP01_s0.png,run1,CMP01,compositional,"two characters, one in red and one in blue",0,30,7.5,DPMSolverMultistep,False,5.45,31.304418563842773
+run1/CMP01_s1.png,run1,CMP01,compositional,"two characters, one in red and one in blue",1,30,7.5,DPMSolverMultistep,False,5.48,30.58095932006836
+run1/CMP02_s0.png,run1,CMP02,compositional,a girl with pink hair standing next to a boy with black hair,0,30,7.5,DPMSolverMultistep,False,5.55,31.18168067932129
+run1/CMP02_s1.png,run1,CMP02,compositional,a girl with pink hair standing next to a boy with black hair,1,30,7.5,DPMSolverMultistep,False,5.47,36.55445098876953
+run1/CMP03_s0.png,run1,CMP03,compositional,a man holding a red umbrella and a woman holding a yellow umbrella,0,30,7.5,DPMSolverMultistep,False,5.45,36.28582763671875
+run1/CMP03_s1.png,run1,CMP03,compositional,a man holding a red umbrella and a woman holding a yellow umbrella,1,30,7.5,DPMSolverMultistep,False,5.46,38.401607513427734
+run1/CMP04_s0.png,run1,CMP04,compositional,a small cat on the left and a large dog on the right,0,30,7.5,DPMSolverMultistep,False,5.47,28.277402877807617
+run1/CMP04_s1.png,run1,CMP04,compositional,a small cat on the left and a large dog on the right,1,30,7.5,DPMSolverMultistep,False,5.5,31.751117706298828
+run1/CMP05_s0.png,run1,CMP05,compositional,"three people sitting on a bench, the one in the middle wears glasses",0,30,7.5,DPMSolverMultistep,False,5.45,33.466365814208984
+run1/CMP05_s1.png,run1,CMP05,compositional,"three people sitting on a bench, the one in the middle wears glasses",1,30,7.5,DPMSolverMultistep,False,5.46,33.75516128540039
+run2/ID01_s0.png,run2,ID01,in_domain,a dog standing on top of a table,0,30,7.5,DPMSolverMultistep,False,5.48,32.378501892089844
+run2/ID01_s1.png,run2,ID01,in_domain,a dog standing on top of a table,1,30,7.5,DPMSolverMultistep,False,5.52,32.72294235229492
+run2/ID02_s0.png,run2,ID02,in_domain,a man with glasses and a green jacket,0,30,7.5,DPMSolverMultistep,True,5.39,20.31820297241211
+run2/ID02_s1.png,run2,ID02,in_domain,a man with glasses and a green jacket,1,30,7.5,DPMSolverMultistep,False,5.49,30.697023391723633
+run2/ID03_s0.png,run2,ID03,in_domain,a person with long hair and a hoodie,0,30,7.5,DPMSolverMultistep,False,5.47,27.213863372802734
+run2/ID03_s1.png,run2,ID03,in_domain,a person with long hair and a hoodie,1,30,7.5,DPMSolverMultistep,False,5.57,30.346446990966797
+run2/ID04_s0.png,run2,ID04,in_domain,a person with long hair and a hat,0,30,7.5,DPMSolverMultistep,False,5.49,28.01104164123535
+run2/ID04_s1.png,run2,ID04,in_domain,a person with long hair and a hat,1,30,7.5,DPMSolverMultistep,False,5.52,26.36937141418457
+run2/ID05_s0.png,run2,ID05,in_domain,a girl sitting on the ground with her hands on her knees,0,30,7.5,DPMSolverMultistep,False,5.49,30.867218017578125
+run2/ID05_s1.png,run2,ID05,in_domain,a girl sitting on the ground with her hands on her knees,1,30,7.5,DPMSolverMultistep,False,5.51,32.86186218261719
+run2/ID06_s0.png,run2,ID06,in_domain,a man with a headband on his head,0,30,7.5,DPMSolverMultistep,False,5.57,29.031190872192383
+run2/ID06_s1.png,run2,ID06,in_domain,a man with a headband on his head,1,30,7.5,DPMSolverMultistep,True,5.38,23.279422760009766
+run2/ID07_s0.png,run2,ID07,in_domain,a woman in a pink dress and brown jacket,0,30,7.5,DPMSolverMultistep,False,5.5,25.302059173583984
+run2/ID07_s1.png,run2,ID07,in_domain,a woman in a pink dress and brown jacket,1,30,7.5,DPMSolverMultistep,False,5.56,28.76415252685547
+run2/ID08_s0.png,run2,ID08,in_domain,a man in a black shirt and a black vest,0,30,7.5,DPMSolverMultistep,True,5.43,22.881193161010742
+run2/ID08_s1.png,run2,ID08,in_domain,a man in a black shirt and a black vest,1,30,7.5,DPMSolverMultistep,True,5.4,22.881193161010742
+run2/ID09_s0.png,run2,ID09,in_domain,a man with glasses and a shirt on,0,30,7.5,DPMSolverMultistep,True,5.39,24.5628662109375
+run2/ID09_s1.png,run2,ID09,in_domain,a man with glasses and a shirt on,1,30,7.5,DPMSolverMultistep,False,5.49,27.441713333129883
+run2/ID10_s0.png,run2,ID10,in_domain,a man with a beard and a hat,0,30,7.5,DPMSolverMultistep,False,5.51,28.3020076751709
+run2/ID10_s1.png,run2,ID10,in_domain,a man with a beard and a hat,1,30,7.5,DPMSolverMultistep,True,5.39,22.36741828918457
+run2/OOD01_s0.png,run2,OOD01,out_of_domain,a photograph of a red sports car on a mountain road,0,30,7.5,DPMSolverMultistep,False,5.46,33.351844787597656
+run2/OOD01_s1.png,run2,OOD01,out_of_domain,a photograph of a red sports car on a mountain road,1,30,7.5,DPMSolverMultistep,False,5.43,33.85506057739258
+run2/OOD02_s0.png,run2,OOD02,out_of_domain,"a bowl of ramen on a wooden table, studio food photography",0,30,7.5,DPMSolverMultistep,False,5.46,32.77983474731445
+run2/OOD02_s1.png,run2,OOD02,out_of_domain,"a bowl of ramen on a wooden table, studio food photography",1,30,7.5,DPMSolverMultistep,False,5.53,32.39398193359375
+run2/OOD03_s0.png,run2,OOD03,out_of_domain,a watercolor painting of a lighthouse at sunset,0,30,7.5,DPMSolverMultistep,False,5.49,36.83894729614258
+run2/OOD03_s1.png,run2,OOD03,out_of_domain,a watercolor painting of a lighthouse at sunset,1,30,7.5,DPMSolverMultistep,False,5.48,38.250831604003906
+run2/OOD04_s0.png,run2,OOD04,out_of_domain,an astronaut riding a horse on the moon,0,30,7.5,DPMSolverMultistep,False,5.5,28.227848052978516
+run2/OOD04_s1.png,run2,OOD04,out_of_domain,an astronaut riding a horse on the moon,1,30,7.5,DPMSolverMultistep,False,5.48,36.52945327758789
+run2/OOD05_s0.png,run2,OOD05,out_of_domain,a modern city skyline at night with neon lights,0,30,7.5,DPMSolverMultistep,False,5.46,29.645130157470703
+run2/OOD05_s1.png,run2,OOD05,out_of_domain,a modern city skyline at night with neon lights,1,30,7.5,DPMSolverMultistep,False,5.47,29.710153579711914
+run2/CMP01_s0.png,run2,CMP01,compositional,"two characters, one in red and one in blue",0,30,7.5,DPMSolverMultistep,False,5.48,30.9793701171875
+run2/CMP01_s1.png,run2,CMP01,compositional,"two characters, one in red and one in blue",1,30,7.5,DPMSolverMultistep,False,5.54,32.02326202392578
+run2/CMP02_s0.png,run2,CMP02,compositional,a girl with pink hair standing next to a boy with black hair,0,30,7.5,DPMSolverMultistep,False,5.5,27.766836166381836
+run2/CMP02_s1.png,run2,CMP02,compositional,a girl with pink hair standing next to a boy with black hair,1,30,7.5,DPMSolverMultistep,False,5.51,35.59709930419922
+run2/CMP03_s0.png,run2,CMP03,compositional,a man holding a red umbrella and a woman holding a yellow umbrella,0,30,7.5,DPMSolverMultistep,False,5.51,34.95561981201172
+run2/CMP03_s1.png,run2,CMP03,compositional,a man holding a red umbrella and a woman holding a yellow umbrella,1,30,7.5,DPMSolverMultistep,False,5.5,35.53155517578125
+run2/CMP04_s0.png,run2,CMP04,compositional,a small cat on the left and a large dog on the right,0,30,7.5,DPMSolverMultistep,False,5.54,27.263086318969727
+run2/CMP04_s1.png,run2,CMP04,compositional,a small cat on the left and a large dog on the right,1,30,7.5,DPMSolverMultistep,False,5.52,30.629247665405273
+run2/CMP05_s0.png,run2,CMP05,compositional,"three people sitting on a bench, the one in the middle wears glasses",0,30,7.5,DPMSolverMultistep,False,5.47,30.91626739501953
+run2/CMP05_s1.png,run2,CMP05,compositional,"three people sitting on a bench, the one in the middle wears glasses",1,30,7.5,DPMSolverMultistep,False,5.54,31.778383255004883

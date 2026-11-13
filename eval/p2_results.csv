@@ -1,0 +1,4 @@
+,KID_mean,KID_std,n_fake,n_real,CLIP_in_domain,CLIP_all,LPIPS_diversity,gpu_hours_training,peak_gpu_mem_GB_training,median_sec_per_image,nsfw_flagged
+base,0.1695,0.0264,20.0,123.0,31.1458,31.884,0.7976,0.0,,5.23,0
+run1,0.0305,0.012,20.0,123.0,28.9531,31.0972,0.7719,0.664,2.67,5.47,0
+run2,0.0776,0.0459,20.0,123.0,27.33,29.8906,0.7753,0.663,2.73,5.49,6
