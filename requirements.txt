@@ -1,0 +1,21 @@
+# Pinned for Kaggle/Colab (Python 3.10/3.11, CUDA 12). torch comes preinstalled on both;
+# the version below is what we tested with -- keep whatever `print(torch.__version__)` shows in Cell 1.
+torch==2.5.1
+torchvision==0.20.1
+
+# Part 2
+diffusers==0.31.0
+transformers==4.46.3
+accelerate==1.1.1
+peft==0.13.2
+datasets==3.1.0
+huggingface_hub==0.26.2
+safetensors==0.4.5
+torchmetrics[image]==1.6.0
+torch-fidelity==0.3.0
+open_clip_torch==2.29.0
+lpips==0.1.4
+pillow==10.4.0
+pandas==2.2.3
+matplotlib==3.9.2
+tqdm==4.67.1

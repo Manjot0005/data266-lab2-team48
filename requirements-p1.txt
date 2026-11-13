@@ -1,0 +1,9 @@
+# Part 1 (multimodal RAG, Kaggle)
+pymupdf==1.25.5
+sentence-transformers==4.1.0
+rank_bm25==0.2.2
+chromadb==1.0.9
+transformers==4.51.3
+accelerate==1.6.0
+bitsandbytes            # 4-bit VLM; falls back to fp16 Qwen2.5-VL-3B if unavailable
+pandas

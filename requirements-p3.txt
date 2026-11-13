@@ -1,0 +1,12 @@
+# Part 3 (multi-agent system) -- separate file because it needs newer transformers (Qwen2.5-VL) than Part 2.
+transformers==4.51.3
+diffusers==0.33.1
+accelerate==1.6.0
+peft==0.15.2
+huggingface_hub==0.30.2
+gradio==5.29.0
+pydantic>=2.7
+bitsandbytes            # optional: 4-bit VLM; the notebook falls back to fp16 if it cannot load
+scikit-image
+matplotlib
+pandas
