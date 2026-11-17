@@ -161,24 +161,3 @@ All agents share one typed state object, and every request saves a JSON trace (w
 **Models:** `Qwen/Qwen2.5-VL-3B-Instruct`, Stable Diffusion 1.5 + the Part 2 LoRA, `timbrooks/instruct-pix2pix`, CLIP ViT-B/32, the Stable Diffusion safety checker.
 
 **Evaluation:** 15 scenarios run with and without the critique loop, 10 red-team cases, two-person pass/fail judgements, critic agreement, median seconds per request. A Gradio app shows each agent's output for the team demo.
-
----
-
-## How to run
-
-Each notebook is self-contained and runs top to bottom on one 16 GB GPU. No hosted API is used.
-
-Run a notebook from the terminal so it keeps going if the connection drops and saves its outputs into the file:
-
-```bash
-cd partN/notebooks
-pip install -q nbconvert ipykernel matplotlib pandas pillow
-nohup jupyter nbconvert --to notebook --execute --inplace NOTEBOOK.ipynb --ExecutePreprocessor.timeout=-1 > run.log 2>&1 &
-tail -f run.log
-```
-
-| Part | Before running | Notes |
-|---|---|---|
-| 1 | Lab files in `part1/data` (or the Kaggle competition data attached) | The graded run must be a Kaggle notebook; it writes `submission.csv` |
-| 2 | `export HF_USER=...` and `export HF_TOKEN=...` in the terminal | Try `QUICK_TEST = True` first; uploads models and images to Hugging Face |
-| 3 | Set `LORA_REPO` in Step 0 to the Part 2 model | For the demo set `LAUNCH_APP = True` and `RUN_EVAL = False` |
