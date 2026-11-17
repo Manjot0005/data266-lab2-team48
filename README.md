@@ -6,7 +6,7 @@ Three parts, one repository:
 |---|---|---|---|
 | 1 | Multimodal RAG: answer questions about three economics PDFs | `part1/notebooks/p1_rag.ipynb` | No. The model is frozen; answers improve through retrieval and rules. |
 | 2 | Fine-tune Stable Diffusion with LoRA on a captioned image set | `part2/notebooks/p2_finetune.ipynb` | Yes. Two LoRA adapters are trained. |
-| 3 | Five agents that understand an image, generate a new one, check it and revise it | `part3/notebooks/p3_agents.ipynb` | No. It uses frozen models plus the Part 2 adapter. |
+| 3 | Five agents that understand an image, generate a new one, check it and revise it | `part3/notebooks/p3_agents_dinosaur_only.ipynb` | No. It uses frozen models plus the Part 2 adapter. |
 
 How the parts connect:
 
