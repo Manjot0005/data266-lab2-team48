@@ -43,7 +43,7 @@ DATA266-Lab2/
 │   ├── prompts/               the 20 fixed evaluation prompts
 │   └── outputs/               result tables (weights and images go to Hugging Face)
 └── part3/
-    ├── notebooks/p3_agents.ipynb
+    ├── notebooks/p3_agents_dinosaur_only.ipynb
     ├── eval/                  15 scenarios, 10 red-team cases
     └── outputs/               traces, result tables
 ```
