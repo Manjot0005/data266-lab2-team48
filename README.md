@@ -1,5 +1,8 @@
 # DATA 266 Lab 2 - Generative AI (Team 48)
 
+
+Hugging Face Profile link(Kavya) : https://huggingface.co/kavyaayyappan1990
+
 Three parts, one repository:
 
 | Part | What it is | Notebook | Does it train a model? |
