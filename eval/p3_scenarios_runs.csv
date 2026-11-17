@@ -1,0 +1,31 @@
+id,category,critique_loop,route,refused,error,revisions,first_decision,final_decision,clip,vlm_score,seconds,message,output
+S01,caption_question,True,caption_question,False,,0,,,,,7.69,A close-up of a cat's face.,
+S02,caption_question,True,caption_question,False,,0,,,,,11.17,"The drink in the cup is coffee, and the saucer is red.",
+S03,caption_question,True,caption_question,False,,0,,,,,9.98,The rocket is on the launch pad.,
+S04,style_change,True,style_change,False,,2,revise,revise,29.46,3.0,70.17,Done after 2 revision(s) (best attempt; the critic was not fully satisfied).,outputs/p3/images/S04_crit_rev2.png
+S05,style_change,True,style_change,False,,2,revise,revise,33.09,2.0,53.45,Done after 2 revision(s) (best attempt; the critic was not fully satisfied).,outputs/p3/images/S05_crit_rev2.png
+S06,style_change,True,style_change,False,,0,accept,accept,33.55,8.0,23.55,Done after 0 revision(s).,outputs/p3/images/S06_crit_rev0.png
+S07,edit,True,edit,False,,0,accept,accept,34.53,10.0,24.34,Done after 0 revision(s).,outputs/p3/images/S07_crit_rev0.png
+S08,edit,True,edit,False,,1,revise,accept,24.43,9.0,42.03,Done after 1 revision(s).,outputs/p3/images/S08_crit_rev1.png
+S09,enhance,True,enhance,False,,0,accept,accept,24.55,8.0,25.87,Done after 0 revision(s).,outputs/p3/images/S09_crit_rev0.png
+S10,domain_style,True,domain_style,False,,0,accept,accept,33.61,7.0,28.97,Done after 0 revision(s).,outputs/p3/images/S10_crit_rev0.png
+S11,domain_style,True,domain_style,False,,0,accept,accept,37.64,8.0,30.43,Done after 0 revision(s).,outputs/p3/images/S11_crit_rev0.png
+S12,domain_style,True,domain_style,False,,0,accept,accept,35.8,7.0,22.37,Done after 0 revision(s).,outputs/p3/images/S12_crit_rev0.png
+S13,ambiguous_broken,True,unsupported,False,,0,,,,,1.88,"I'm not sure what you want. I can: describe or answer questions about an image, change its style (e.g. 'make it a waterc",
+S14,ambiguous_broken,True,unsupported,False,the image file is corrupted or not an image,0,,,,,0.0,"Sorry, I can't work with this input: the image file is corrupted or not an image. Please upload a valid photo (JPG/PNG, ",
+S15,ambiguous_broken,True,unsupported,False,the image is blank (a single flat colour),0,,,,,0.0,"Sorry, I can't work with this input: the image is blank (a single flat colour). Please upload a valid photo (JPG/PNG, at",
+S01,caption_question,False,caption_question,False,,0,,,,,8.3,A close-up of a cat's face.,
+S02,caption_question,False,caption_question,False,,0,,,,,10.92,"The drink in the cup is coffee, and the saucer is red.",
+S03,caption_question,False,caption_question,False,,0,,,,,9.43,The rocket is on the launch pad.,
+S04,style_change,False,style_change,False,,0,revise,revise,29.23,3.0,26.12,Done after 0 revision(s) (best attempt; the critic was not fully satisfied).,outputs/p3/images/S04_nocrit_rev0.png
+S05,style_change,False,style_change,False,,0,revise,revise,27.27,2.0,24.17,Done after 0 revision(s) (best attempt; the critic was not fully satisfied).,outputs/p3/images/S05_nocrit_rev0.png
+S06,style_change,False,style_change,False,,0,accept,accept,33.55,8.0,22.46,Done after 0 revision(s).,outputs/p3/images/S06_nocrit_rev0.png
+S07,edit,False,edit,False,,0,accept,accept,34.53,10.0,23.7,Done after 0 revision(s).,outputs/p3/images/S07_nocrit_rev0.png
+S08,edit,False,edit,False,,0,revise,revise,23.33,7.0,25.45,Done after 0 revision(s) (best attempt; the critic was not fully satisfied).,outputs/p3/images/S08_nocrit_rev0.png
+S09,enhance,False,enhance,False,,0,accept,accept,24.55,8.0,26.38,Done after 0 revision(s).,outputs/p3/images/S09_nocrit_rev0.png
+S10,domain_style,False,domain_style,False,,0,accept,accept,33.61,7.0,28.81,Done after 0 revision(s).,outputs/p3/images/S10_nocrit_rev0.png
+S11,domain_style,False,domain_style,False,,0,accept,accept,37.64,8.0,29.73,Done after 0 revision(s).,outputs/p3/images/S11_nocrit_rev0.png
+S12,domain_style,False,domain_style,False,,0,accept,accept,35.8,7.0,22.38,Done after 0 revision(s).,outputs/p3/images/S12_nocrit_rev0.png
+S13,ambiguous_broken,False,unsupported,False,,0,,,,,2.0,"I'm not sure what you want. I can: describe or answer questions about an image, change its style (e.g. 'make it a waterc",
+S14,ambiguous_broken,False,unsupported,False,the image file is corrupted or not an image,0,,,,,0.0,"Sorry, I can't work with this input: the image file is corrupted or not an image. Please upload a valid photo (JPG/PNG, ",
+S15,ambiguous_broken,False,unsupported,False,the image is blank (a single flat colour),0,,,,,0.0,"Sorry, I can't work with this input: the image is blank (a single flat colour). Please upload a valid photo (JPG/PNG, at",
