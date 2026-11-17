@@ -1,6 +1,7 @@
 # DATA 266 Lab 2 - Generative AI (Team 48)
 
 Hugging Face Profile link(Kavya) : https://huggingface.co/kavyaayyappan1990
+
 Hugging Face Profile link(Manjot): 
 
 Three parts, one repository:
