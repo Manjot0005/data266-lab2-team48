@@ -1,15 +1,15 @@
 # DATA 266 Lab 2 - Generative AI (Team 48)
 
-
 Hugging Face Profile link(Kavya) : https://huggingface.co/kavyaayyappan1990
+Hugging Face Profile link(Manjot): 
 
 Three parts, one repository:
 
 | Part | What it is | Notebook | Does it train a model? |
 |---|---|---|---|
-| 1 | Multimodal RAG: answer questions about three economics PDFs | `part1/notebooks/p1_rag.ipynb` | No. The model is frozen; answers improve through retrieval and rules. |
+| 1 | Multimodal RAG: answer questions about three economics PDFs | `part1_kaggle/notebooks/p1_rag.ipynb` | No. The model is frozen; answers improve through retrieval and rules. |
 | 2 | Fine-tune Stable Diffusion with LoRA on a captioned image set | `part2/notebooks/p2_finetune.ipynb` | Yes. Two LoRA adapters are trained. |
-| 3 | Five agents that understand an image, generate a new one, check it and revise it | `part3/notebooks/p3_agents_dinosaur_only.ipynb` | No. It uses frozen models plus the Part 2 adapter. |
+| 3 | Five agents that understand an image, generate a new one, check it and revise it | `part3/notebooks/p3_agents_dinosaurs_only.ipynb` | No. It uses frozen models plus the Part 2 adapter. |
 
 How the parts connect:
 
@@ -33,19 +33,20 @@ Part 1 stands alone. Part 3 needs the adapter that Part 2 trains.
 ```
 DATA266-Lab2/
 ├── README.md                  this file
-├── part1/
+├── part1_kaggle/
 │   ├── notebooks/p1_rag.ipynb
-│   ├── data/                  3 PDFs, kb_manifest.json, Questions.csv, validator
-│   ├── eval/golden_set.json   25 golden questions
-│   └── outputs/               result tables, fact store, figure crops
+│   ├── notebooks/submission.csv   written by the notebook
+│   ├── data/                  lab files from the Kaggle competition (3 PDFs, kb_manifest.json, Questions.csv, validator)
+│   ├── eval/                  golden_set.json (25 golden questions), human_eval.csv (two-person ratings)
+│   └── outputs/               result tables, fact store, figure descriptions
 ├── part2/
 │   ├── notebooks/p2_finetune.ipynb
 │   ├── prompts/               the 20 fixed evaluation prompts
 │   └── outputs/               result tables (weights and images go to Hugging Face)
 └── part3/
-    ├── notebooks/p3_agents_dinosaur_only.ipynb
-    ├── eval/                  15 scenarios, 10 red-team cases
-    └── outputs/               traces, result tables
+    ├── notebooks/p3_agents_dinosaurs_only.ipynb
+    ├── eval/                  15 scenarios, 10 red-team cases, human judgements
+    └── outputs/               traces, result tables, evidence figures, test images
 ```
 
 ---
@@ -158,6 +159,27 @@ flowchart TD
 
 All agents share one typed state object, and every request saves a JSON trace (which agent ran, its input and output, how long it took).
 
-**Models:** `Qwen/Qwen2.5-VL-3B-Instruct`, Stable Diffusion 1.5 + the Part 2 LoRA, `timbrooks/instruct-pix2pix`, CLIP ViT-B/32, the Stable Diffusion safety checker.
+**Models:** `Qwen/Qwen2.5-VL-3B-Instruct`, Stable Diffusion 1.5 + the Part 2 LoRA (`kavyaayyappan1990/data266-lab2-team48-run2-lora-r16`), `timbrooks/instruct-pix2pix`, `stabilityai/stable-diffusion-xl-base-1.0` (used only when the GPU has spare memory; otherwise Stable Diffusion 1.5), CLIP ViT-B/32, the Stable Diffusion safety checker.
 
 **Evaluation:** 15 scenarios run with and without the critique loop, 10 red-team cases, two-person pass/fail judgements, critic agreement, median seconds per request. A Gradio app shows each agent's output for the team demo.
+
+---
+
+## How to run
+
+Each notebook is self-contained and runs top to bottom on one 16 GB GPU. No hosted API is used.
+
+Run a notebook from the terminal so it keeps going if the connection drops and saves its outputs into the file:
+
+```bash
+cd partN/notebooks
+pip install -q nbconvert ipykernel matplotlib pandas pillow
+nohup jupyter nbconvert --to notebook --execute --inplace NOTEBOOK.ipynb --ExecutePreprocessor.timeout=-1 > run.log 2>&1 &
+tail -f run.log
+```
+
+| Part | Before running | Notes |
+|---|---|---|
+| 1 | Lab files in `part1_kaggle/data` (or the Kaggle competition data attached), `golden_set.json` in `part1_kaggle/eval` | The graded run must be a Kaggle notebook; it writes `submission.csv` |
+| 2 | `export HF_USER=...` and `export HF_TOKEN=...` in the terminal | Try `QUICK_TEST = True` first; uploads models and images to Hugging Face |
+| 3 | `LORA_REPO` in Step 0 already points to the Part 2 model | For the demo run with `LAUNCH_APP=1` and `RUN_EVAL=0` |
