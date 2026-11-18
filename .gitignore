@@ -22,3 +22,5 @@ wandb/
 # python
 __pycache__/
 .ipynb_checkpoints/
+.DS_Store
+part1_kavya/data/

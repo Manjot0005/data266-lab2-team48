@@ -1,10 +1,15 @@
-# AI Usage — Pair_Programming_Team_##
+# AI Usage — Pair_Programming_Team_48
+
+Team members: Manjot Kaur and Kavya Ayyappan
+
+Each team member completed their own assigned implementation, experiments, evaluations, and final submissions independently. AI tools were used only for assistance with drafting, debugging, explanations, and workflow support. We reviewed, modified, executed, and evaluated all code ourselves.
 
 | Assistant (version) | Used by | Part(s) | What it was used for |
 |---|---|---|---|
-| Claude (Anthropic, Claude Opus 5.5) | Manjot Kaur | 2 | Drafted the repo skeleton (README, requirements, templates) and a first version of `p2_finetune.ipynb` (data cleaning, LoRA training loop, generation, metric code). We reviewed, ran and modified the code ourselves. All results come from our own executed notebooks. |
-| Claude (Anthropic, Claude Opus 5.5) | Manjot Kaur | 3 | Drafted a first version of `p3_agents.ipynb` (agent functions, shared state, safety rules, scenario/red-team lists, evaluation cells, Gradio app). We reviewed, ran and changed it; scenarios/rubrics were checked and edited by us before running. |
-| Claude (Anthropic, Claude Opus 5.5) | Manjot Kaur | 1 | Drafted a first version of `p1_rag.ipynb` (PDF ingestion, figure cropping, hybrid retrieval, answer post-processing, conversation memory, submission writer, evaluation code). The golden set was written by us. We reviewed, ran and tuned the code. |
-| | | | |
+| Claude (Anthropic, Claude Opus 5.5) | Manjot Kaur | 1 | Assisted with drafting code for `part1_manjot/notebooks/p1_rag.ipynb`, including PDF ingestion, figure and table cropping, table-fact parsing, hybrid retrieval, answer post-processing, conversation memory, and submission writing. Claude also helped debug the notebook over five versions using our Kaggle scores and our own error analysis. It suggested the `Qwen/Qwen3-VL-8B-Instruct` vision-language model. Manjot Kaur independently ran every version, reviewed the outputs, chose what to keep, made the final design decisions, and completed the final Kaggle run. No answers or question-specific rules were hard-coded. |
+| Claude (Anthropic, Claude Opus 5.5) | Manjot Kaur | 2 | Assisted with drafting the repository skeleton and an initial version of `part2_manjot/notebooks/p2_finetune.ipynb`, including data cleaning, the LoRA training loop, image generation, and metric code. Manjot Kaur independently reviewed, modified, executed, and evaluated the code. All final results came from her own executed notebooks and experiments. |
+| Claude (Anthropic, Claude Opus 5.5) | Manjot Kaur | 3 | Assisted with drafting `part3_manjot/notebooks/p3_agents.ipynb`, including the agents, shared state, safety rules, scenario and red-team lists, evaluation cells, and Gradio app. Manjot Kaur independently reviewed and modified the implementation, checked the scenarios and rubrics, ran the notebook, and made all final pass/fail judgments. |
+| Claude (Anthropic, Claude Opus 5.5) | Manjot Kaur | All | Assisted with Git, Colab, and Kaggle workflow questions, including commands, tags, file transfers, and repository organization. Claude also assisted with drafting the `results_summary.ipynb` notebook and the initial versions of repository documentation. Manjot Kaur independently verified, edited, ran, and finalized these materials. |
+| Claude and ChatGPT | Kavya Ayyappan | 1, 2, 3 | Assisted Kavya Ayyappan with writing and revising code in `part1_kavya`, `part2_kavya`, and `part3_kavya`, debugging errors on RunPod and Kaggle, explaining new concepts, writing Git commands, and drafting README files. Kavya Ayyappan independently reviewed, modified, executed, evaluated, and finalized her own implementations and results. |
 
-We did not use AI tools to write the report text or to create any result. Every number in the report comes from a notebook output.
+We completed our own assigned work independently. We ran every notebook ourselves, made the design decisions, checked the outputs, and performed the human evaluations and red-team review. Every number reported in the project came from an executed notebook output or a committed project file that we reviewed. AI tools did not perform the final evaluation, make the final submission decisions, or replace our own analysis.

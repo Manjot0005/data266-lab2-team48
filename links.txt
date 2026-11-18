@@ -1,0 +1,34 @@
+Team: Pair_Programming_Team_48
+Members: Manjot Kaur (018286359), Kavya Ayyappan (016052738)
+
+# GitHub
+Repository: https://github.com/Manjot0005/data266-lab2-team48
+p1-v1.0 commit: 5ff4101
+p2-v1.0 commit: 416499c
+p3-v1.0 commit: 416499c
+
+# Kaggle (Part 1)
+Kaggle team name: Pair_Programming_Team_48
+Final notebook: https://www.kaggle.com/code/manjotkaur05/notebookc839b62419
+Notebook version used for final submission: 1
+
+# Hugging Face (Part 2)
+Model, run 1 (LoRA): https://huggingface.co/manjottxkaur/data266-lab2-team48-p2-run1-lora-r4
+Model, run 2: https://huggingface.co/manjottxkaur/data266-lab2-team48-p2-run2-lora-r32
+Generated images dataset: https://huggingface.co/datasets/manjottxkaur/data266-lab2-team48-p2-images
+
+# Hugging Face (Part 3)
+Input images dataset (optional): not used (test images were generated inside the notebook from scikit-image public-domain images)
+Space (optional, bonus): not deployed
+
+# Recordings
+Folder with meeting recordings (optional): not provided
+
+# Hugging Face (Part 2, Kavya Ayyappan's pipeline in part2_kavya)
+Model, run 1 (LoRA r=4): https://huggingface.co/kavyaayyappan1990/data266-lab2-team48-run1-lora-r4
+Model, run 2 (LoRA r=16): https://huggingface.co/kavyaayyappan1990/data266-lab2-team48-run2-lora-r16
+Generated images dataset: https://huggingface.co/datasets/kavyaayyappan1990/data266-lab2-team48-p2-generated
+
+# Kaggle (Part 1, other team notebooks, NOT the final submission)
+Kavya Ayyappan: https://www.kaggle.com/code/kavyaayyappan1998/notebookf47a721eca
+Kavya Ayyappan: https://www.kaggle.com/code/kavyaayyappan1998/notebook9873913700
