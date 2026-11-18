@@ -2,6 +2,8 @@
 
 Hugging Face Profile link(Kavya) : https://huggingface.co/kavyaayyappan1990
 
+Kaggle notebook (Kavya) : https://www.kaggle.com/code/kavyaayyappan1998/notebook9873913700
+
 Hugging Face Profile link(Manjot): 
 
 Three parts, one repository:
