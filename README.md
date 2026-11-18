@@ -1,85 +1,186 @@
-# DATA 266 Lab 2 — Pair_Programming_Team_## 
+# DATA 266 Lab 2 - Generative AI (Team 48)
 
-> Replace `##` with your two-digit team number everywhere (repo name, Kaggle team, Canvas zip).
+Hugging Face Profile link(Kavya) : https://huggingface.co/kavyaayyappan1990
 
-Members: Manjot Kaur, _partner name_
+Hugging Face Profile link(Manjot): 
 
-| Part | Notebook | Tag | Status |
+Three parts, one repository:
+
+| Part | What it is | Notebook | Does it train a model? |
 |---|---|---|---|
-| 1. Multimodal RAG (Kaggle) | `notebooks/p1_rag.ipynb` | `p1-v1.0` | in progress |
-| 2. Diffusion LoRA fine-tuning | `notebooks/p2_finetune.ipynb` | `p2-v1.0` | in progress |
-| 3. Multimodal multi-agent system | `notebooks/p3_agents.ipynb` | `p3-v1.0` | in progress |
+| 1 | Multimodal RAG: answer questions about three economics PDFs | `part1_kaggle/notebooks/p1_rag.ipynb` | No. The model is frozen; answers improve through retrieval and rules. |
+| 2 | Fine-tune Stable Diffusion with LoRA on a captioned image set | `part2/notebooks/p2_finetune.ipynb` | Yes. Two LoRA adapters are trained. |
+| 3 | Five agents that understand an image, generate a new one, check it and revise it | `part3/notebooks/p3_agents_dinosaurs_only.ipynb` | No. It uses frozen models plus the Part 2 adapter. |
 
-All required work runs on a single 16 GB GPU (Kaggle T4/P100 or Colab T4).
+How the parts connect:
 
-## Setup
-
-```bash
-git clone https://github.com/<org-or-user>/data266-lab2-team##.git
-cd data266-lab2-team##
-pip install -r requirements.txt
+```mermaid
+flowchart LR
+    P1["Part 1<br/>Multimodal RAG"]
+    P2["Part 2<br/>LoRA fine-tuning"]
+    P3["Part 3<br/>Multi-agent system"]
+    HF[("Hugging Face<br/>models + images")]
+    P2 -- "trained adapter" --> HF
+    HF -- "domain-style model" --> P3
+    P1 -. "same vision-language model" .-> P3
 ```
 
-Secrets (never commit them): set `HF_TOKEN` as an environment variable, or as a Kaggle secret / Colab secret with the same name.
+Part 1 stands alone. Part 3 needs the adapter that Part 2 trains.
 
-## Part 1 — how to run (Kaggle)
-
-1. Create a Kaggle notebook from `notebooks/p1_rag.ipynb`, attach the competition data, GPU T4 x2, internet ON (downloads models).
-2. Write the 25-question golden set in `prompts/p1_golden_set.csv` (template created on first run) and **commit it before tuning**.
-3. Run all: it builds the index, answers `QUESTIONS_PATH` (default `Questions.csv`), writes `submission.csv` and runs `validate_submission.py`.
-4. Submit `submission.csv` from the Output tab. Graders re-run the tagged notebook with the hidden set via `QUESTIONS_PATH`.
-
-## Part 2 — how to run
-
-**RunPod (RTX 4090/5090):** clone the repo into `/workspace`, run `huggingface-cli login`, then execute
-`jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=-1 notebooks/p2_finetune.ipynb`
-inside `tmux` (or open it in JupyterLab and Restart & Run All). Peak GPU memory is ~3 GB, well under the 16 GB limit.
-
-
-1. **Colab T4:** open `notebooks/p2_finetune.ipynb` in Colab (Runtime > Change runtime type > T4 GPU). Add Colab secrets `HF_TOKEN` and `GITHUB_TOKEN` (a GitHub personal access token with repo read/write) and set `GITHUB_REPO` in Cell 1. Cell 1 mounts Google Drive and clones the repo to `MyDrive/data266-lab2-team48`, so checkpoints and images survive a disconnect; just re-run all cells and training resumes. **Kaggle:** clone the repo and set `REPO_DIR`.
-2. Set `HF_USER` in the config cell.
-3. Run the notebook to the end of section 2.3 ("Write the 20 prompts"), then **commit `prompts/p2_prompts.json` and push before training finishes** (the Git timestamp is checked).
-4. Run all (Restart & Run All) to produce the final executed notebook. Training takes about 1 GPU-hour per run on a T4 with the default settings.
-5. After both raters + one outside rater fill in `human_eval/p2_ratings_<name>.csv`, re-run the human-evaluation section.
-
-Models and images are pushed to Hugging Face, not GitHub:
-- `HF_USER/data266-lab2-team##-p2-run1-lora-r4`
-- `HF_USER/data266-lab2-team##-p2-run2-lora-r32`
-- dataset `HF_USER/data266-lab2-team##-p2-images`
-
-## Part 3 — how to run
-
-1. Open `notebooks/p3_agents.ipynb` on Colab/Kaggle with a T4 (Part 3 installs `requirements-p3.txt` pins in its install cell).
-2. It loads the final Part 2 LoRA from `HF_USER/data266-lab2-team##-p2-run1-lora-r4` (or a local `outputs/run1/final`).
-3. Run the notebook up to the scenarios cell, **commit `prompts/p3_scenarios.json`**, then Restart & Run All.
-4. Both members fill `human_eval/p3_judgements_<name>.csv` (copy of the template), agree on `human_eval/p3_judgements_final.csv`, and re-run the scoring cell.
-5. The last cell launches the Gradio demo (`share=True` prints a public link).
-
-## Models and APIs used (with versions)
-
-| Part | Model | Where it runs |
-|---|---|---|
-| 1 | `Qwen/Qwen2.5-VL-7B-Instruct` (4-bit; fallback `Qwen2.5-VL-3B-Instruct` fp16) — figure descriptions + answers | Kaggle GPU |
-| 1 | `BAAI/bge-small-en-v1.5` embeddings, ChromaDB, BM25 (`rank_bm25`); optional `BAAI/bge-reranker-base` | Kaggle GPU |
-| 2 | `stable-diffusion-v1-5/stable-diffusion-v1-5` | local GPU |
-| 2 | `openai/clip-vit-base-patch16` (CLIP score), Inception-v3 (KID via torchmetrics), LPIPS AlexNet | local GPU |
-| 2 | `openai/clip-vit-large-patch14` (memorization check) | local GPU |
-
-| 3 | `Qwen/Qwen2.5-VL-3B-Instruct` (4-bit NF4, fp16 fallback) — planner checks, vision, prompt writing, critique | local GPU |
-| 3 | `stable-diffusion-v1-5/stable-diffusion-v1-5` img2img + Part 2 LoRA; `timbrooks/instruct-pix2pix` | local GPU |
-| 3 | `openai/clip-vit-base-patch16` (critique score); SD safety checker (NSFW output filter) | local GPU |
-
-No hosted API is used in any part. (Add any API you use in Parts 1/3 here with its exact model version.)
+---
 
 ## Repository layout
 
 ```
-notebooks/        executed notebooks, one or more per part
-src/              shared helper code
-prompts/          test prompts / questions, committed BEFORE tuning
-eval/             metric outputs (json/csv) written by notebooks
-human_eval/       blinded rating sheets and filled ratings
-recordings/       links/notes for meeting recordings (large files stay outside Git)
-CONTRIBUTIONS.md  who did what + list of meeting recordings
-AI_USAGE.md       AI coding assistants used and for what
+DATA266-Lab2/
+├── README.md                  this file
+├── part1_kaggle/
+│   ├── notebooks/p1_rag.ipynb
+│   ├── notebooks/submission.csv   written by the notebook
+│   ├── data/                  lab files from the Kaggle competition (3 PDFs, kb_manifest.json, Questions.csv, validator)
+│   ├── eval/                  golden_set.json (25 golden questions), human_eval.csv (two-person ratings)
+│   └── outputs/               result tables, fact store, figure descriptions
+├── part2/
+│   ├── notebooks/p2_finetune.ipynb
+│   ├── prompts/               the 20 fixed evaluation prompts
+│   └── outputs/               result tables (weights and images go to Hugging Face)
+└── part3/
+    ├── notebooks/p3_agents_dinosaurs_only.ipynb
+    ├── eval/                  15 scenarios, 10 red-team cases, human judgements
+    └── outputs/               traces, result tables, evidence figures, test images
 ```
+
+---
+
+## Part 1 - Multimodal RAG over a read-only knowledge base
+
+**Goal:** answer questions about three economics PDFs using their text, figures and tables, with citations, and without ever changing the documents.
+
+```mermaid
+flowchart TD
+    A["3 PDFs + trust manifest"] --> B["Extract text chunks<br/>(keep document and page)"]
+    A --> C["Extract every Figure and Table<br/>(crop + caption)"]
+    C --> D["Describe figures with the vision model"]
+    C --> E["Fact store<br/>(table cells as records)"]
+    B --> F["Index: ChromaDB (dense) + BM25 (keyword)"]
+    D --> F
+    Q["Question"] --> G["Hybrid retrieval<br/>+ exact figure lookup"]
+    F --> G
+    G --> H["Rules before answering<br/>drop Appendix C, strip injected text,<br/>resolve forecast vs outturn, revision, conflict"]
+    E --> H
+    H --> I["Vision-language model writes the answer<br/>(sees the figure image)"]
+    M["Conversation memory<br/>(user values, this chat only)"] --> I
+    I --> J["Final rules<br/>set status, check citations"]
+    J --> K["JSON answer:<br/>answer, status, citations, figure_references"]
+```
+
+**Key ideas**
+
+- **Hybrid retrieval:** dense embeddings (`bge-small`) plus BM25, fused; a question that names "Figure A-5" always gets that exact figure.
+- **Trust:** Appendix C of Document 3 is low trust and is never used as evidence. Instructions found in documents or images are never followed.
+- **Precedence by rule:** an actual result replaces a forecast, a stated revision replaces the old value, and two disagreeing sources with no revision note give status `conflict`.
+- **Conversation memory:** a value the user supplies ("assume ... for this chat") applies only to that conversation. Requests to change the documents permanently are refused.
+- **Statuses:** `answered`, `not_found`, `conflict`, `false_premise`, `session_override`.
+
+**Models:** `BAAI/bge-small-en-v1.5` (embeddings), `Qwen/Qwen2.5-VL-3B-Instruct` (figure descriptions and answers), optional `BAAI/bge-reranker-base`.
+
+**Evaluation:** 25 golden questions; answer correctness, Recall@5, citation accuracy, median seconds per question; baseline (dense only) against the final system; two-person groundedness ratings.
+
+---
+
+## Part 2 - Fine-tuning a diffusion model with LoRA
+
+**Goal:** teach Stable Diffusion 1.5 a specific visual domain, compare two fine-tuning runs with the base model, and measure quality, prompt match, diversity and cost.
+
+```mermaid
+flowchart TD
+    A["Captioned image dataset<br/>(Hugging Face)"] --> B["Clean<br/>remove corrupted + duplicate images"]
+    B --> C["Split 90% train / 10% test (seed 266)<br/>resize to 512x512"]
+    C --> D["Fix 20 prompts before training<br/>10 in-domain, 5 out-of-domain, 5 compositional"]
+    C --> E["Encode once<br/>images to latents, captions to embeddings"]
+    E --> F1["Run 1: LoRA rank 4"]
+    E --> F2["Run 2: LoRA rank 16"]
+    F1 --> G["Generate 40 images each<br/>base, run 1, run 2 (same seeds and settings)"]
+    F2 --> G
+    D --> G
+    G --> H["Evaluate<br/>KID, CLIP score, LPIPS diversity, GPU-hours"]
+    H --> I["Choose the final run"]
+    I --> J["Human evaluation<br/>25 blinded pairs, 3 raters"]
+    I --> K["Safety<br/>license, NSFW filter, memorization check"]
+    F1 --> L[("Hugging Face<br/>models + model card + image dataset")]
+    F2 --> L
+    G --> L
+```
+
+**What training does:** the VAE and text encoder stay frozen. Small low-rank matrices (LoRA) added to the UNet's attention layers are trained to predict the noise added to image latents. Both runs use the same data, steps, batch size and learning rate; only the rank differs.
+
+**Measurements**
+
+| Measurement | Meaning |
+|---|---|
+| KID | Distance between generated in-domain images and held-out test images (lower is better) |
+| CLIP score | How well each image matches its prompt |
+| LPIPS diversity | How different the two seeds of one prompt are |
+| GPU-hours, peak memory | Cost of each training run |
+| Human win rate | Final run against base model on 25 blinded pairs |
+
+**Note:** the training images show copyrighted characters, so the models are for non-commercial research and teaching only.
+
+---
+
+## Part 3 - Multimodal multi-agent system
+
+**Goal:** take an image and a request, understand the image, build a good prompt, generate a new image, check it, and revise it if needed.
+
+```mermaid
+flowchart TD
+    U["User: image + request"] --> P["1. Planner<br/>input safety check + routing"]
+    P -- "unsafe, deceptive, or 'do what the image says'" --> R["Refuse"]
+    P -- "unclear request" --> Q["Ask a clarifying question"]
+    P -- "broken or blank image" --> X["Clear error message"]
+    P --> V["2. Vision Understanding<br/>caption, objects, visible text, answers"]
+    V -- "caption or question" --> DONE1["Answer and stop"]
+    V --> PE["3. Prompt Engineering<br/>build the prompt; image text is removed"]
+    PE --> G["4. Image Generation<br/>style change / domain style / edit / enhancement"]
+    G --> C["5. Critique<br/>output safety check + CLIP score + model judgement"]
+    C -- "accept" --> DONE2["Return the image"]
+    C -- "revise (max 2 times)" --> PE
+    C -- "unsafe output" --> B["Block and delete the image"]
+```
+
+**The five agents**
+
+| Agent | Job |
+|---|---|
+| Planner | Classifies the request, picks the route, refuses unsafe requests, deceptive edits of real people, and requests that hand control to text in the image |
+| Vision Understanding | Caption, main objects, visible text, answers to questions about the image |
+| Prompt Engineering | Turns the request into a generation prompt; text read from the image never reaches the generator |
+| Image Generation | Style change and domain style (image-to-image; domain style uses the Part 2 adapter), edit (InstructPix2Pix), enhancement |
+| Critique | Checks the output is safe, scores it, and decides accept or revise with a concrete instruction |
+
+All agents share one typed state object, and every request saves a JSON trace (which agent ran, its input and output, how long it took).
+
+**Models:** `Qwen/Qwen2.5-VL-3B-Instruct`, Stable Diffusion 1.5 + the Part 2 LoRA (`kavyaayyappan1990/data266-lab2-team48-run2-lora-r16`), `timbrooks/instruct-pix2pix`, `stabilityai/stable-diffusion-xl-base-1.0` (used only when the GPU has spare memory; otherwise Stable Diffusion 1.5), CLIP ViT-B/32, the Stable Diffusion safety checker.
+
+**Evaluation:** 15 scenarios run with and without the critique loop, 10 red-team cases, two-person pass/fail judgements, critic agreement, median seconds per request. A Gradio app shows each agent's output for the team demo.
+
+---
+
+## How to run
+
+Each notebook is self-contained and runs top to bottom on one 16 GB GPU. No hosted API is used.
+
+Run a notebook from the terminal so it keeps going if the connection drops and saves its outputs into the file:
+
+```bash
+cd partN/notebooks
+pip install -q nbconvert ipykernel matplotlib pandas pillow
+nohup jupyter nbconvert --to notebook --execute --inplace NOTEBOOK.ipynb --ExecutePreprocessor.timeout=-1 > run.log 2>&1 &
+tail -f run.log
+```
+
+| Part | Before running | Notes |
+|---|---|---|
+| 1 | Lab files in `part1_kaggle/data` (or the Kaggle competition data attached), `golden_set.json` in `part1_kaggle/eval` | The graded run must be a Kaggle notebook; it writes `submission.csv` |
+| 2 | `export HF_USER=...` and `export HF_TOKEN=...` in the terminal | Try `QUICK_TEST = True` first; uploads models and images to Hugging Face |
+| 3 | `LORA_REPO` in Step 0 already points to the Part 2 model | For the demo run with `LAUNCH_APP=1` and `RUN_EVAL=0` |
