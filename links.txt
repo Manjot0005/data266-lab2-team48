@@ -30,5 +30,4 @@ Model, run 2 (LoRA r=16): https://huggingface.co/kavyaayyappan1990/data266-lab2-
 Generated images dataset: https://huggingface.co/datasets/kavyaayyappan1990/data266-lab2-team48-p2-generated
 
 # Kaggle (Part 1, other team notebooks, NOT the final submission)
-Kavya Ayyappan: https://www.kaggle.com/code/kavyaayyappan1998/notebookf47a721eca
 Kavya Ayyappan: https://www.kaggle.com/code/kavyaayyappan1998/notebook9873913700
