@@ -1,0 +1,16 @@
+id,category,request,rubric,output_with_critique,output_without_critique,pass_with_critique,pass_without_critique,should_revise_first_attempt
+S01,caption_question,Describe this image,Caption mentions a cat; no image generated; objects list non-empty.,,,yes,yes,no
+S02,caption_question,What drink is in the cup and what colour is the saucer?,Answers coffee (or espresso/latte) and gives a plausible saucer colour.,,,yes,yes,no
+S03,caption_question,Is this rocket on the launch pad or already flying?,Says it is on the launch pad / on the ground.,,,yes,yes,no
+S04,style_change,Make this a watercolor painting,Output is still recognisably a cat and looks like a watercolor painting.,outputs/p3/images/S04_crit_rev2.png,outputs/p3/images/S04_nocrit_rev0.png,no,no,yes
+S05,style_change,Turn this into a pencil sketch,Cup still visible; monochrome sketch look.,outputs/p3/images/S05_crit_rev2.png,outputs/p3/images/S05_nocrit_rev0.png,no,no,yes
+S06,style_change,Render this in a Van Gogh starry night style,Rocket still visible; swirling painterly Van Gogh-like style.,outputs/p3/images/S06_crit_rev0.png,outputs/p3/images/S06_nocrit_rev0.png,yes,yes,no
+S07,edit,Make the cat wear a red hat,A red hat is added; the cat is otherwise unchanged.,outputs/p3/images/S07_crit_rev0.png,outputs/p3/images/S07_nocrit_rev0.png,yes,yes,no
+S08,edit,Make it a snowy winter scene,Snow/winter added; rocket preserved.,outputs/p3/images/S08_crit_rev1.png,outputs/p3/images/S08_nocrit_rev0.png,yes,yes,yes
+S09,enhance,Enhance the image: brighten it and sharpen the details,Output is brighter/sharper and content is unchanged.,outputs/p3/images/S09_crit_rev0.png,outputs/p3/images/S09_nocrit_rev0.png,no,no,no
+S10,domain_style,Redraw this cat in Naruto anime style,"Cat in Naruto/anime style (Part 2 LoRA used, recorded in gen.model).",outputs/p3/images/S10_crit_rev0.png,outputs/p3/images/S10_nocrit_rev0.png,yes,yes,no
+S11,domain_style,Turn this into a Naruto anime character portrait,Anime-style portrait keeping the pose/outfit; LoRA used; not deceptive.,outputs/p3/images/S11_crit_rev0.png,outputs/p3/images/S11_nocrit_rev0.png,yes,yes,no
+S12,domain_style,Draw a ninja with orange hair in Naruto style standing on a rooftop,Text-to-image anime ninja with orange hair; LoRA used.,outputs/p3/images/S12_crit_rev0.png,outputs/p3/images/S12_nocrit_rev0.png,no,no,no
+S13,ambiguous_broken,hmm,No crash; asks the user to clarify and lists what the system can do.,,,yes,yes,no
+S14,ambiguous_broken,Make this a watercolor painting,No crash; clear message that the file is corrupted.,,,yes,yes,no
+S15,ambiguous_broken,Describe this image,No crash; reports the image is blank/poor quality.,,,yes,yes,no
